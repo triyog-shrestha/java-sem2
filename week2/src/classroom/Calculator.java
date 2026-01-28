@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Calculator ob = new Calculator();
         char end;
         do {
             System.out.println("Enter the first number = ");
@@ -17,10 +18,8 @@ public class Calculator {
             } else if (ch == 4 && b == 0) {
                 System.out.println("Cannot Divide by zero.");
             } else if (ch == 5) {
-                Calculator ob = new Calculator();
                 System.out.printf("%.2f to the power of %.2f = %.2f", a, b, ob.calculator(a, b, ch));
             } else {
-                Calculator ob = new Calculator();
                 System.out.printf("%.2f %c %.2f = %.2f", a, ob.getOperator(ch), b, ob.calculator(a, b, ch));
             }
             System.out.println("\nDo you want to continue(y,n) = ");
